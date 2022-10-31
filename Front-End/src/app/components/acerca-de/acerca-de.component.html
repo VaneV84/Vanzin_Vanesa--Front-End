@@ -1,0 +1,23 @@
+<div class="row">
+
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+        <img src="{{persona?.img}}" class="img-fluid" id="fotoPerfil">
+    </div>
+
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+        <button type="button" class="btn btn-secondary" routerLink="/editper/1" 
+        *ngIf="isLogged">
+        Editar Persona
+        </button>
+
+        <h2 id="nombre">{{persona?.nombre}} {{persona?.apellido}}</h2>
+        <h3 id="puesto">{{persona?.puesto}}</h3>
+    </div>       
+    
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+        <span>
+            <h3 id="acercaDe">Acerca de mí</h3>
+            <p id="intro">{{persona?.intro}}</p> 
+        </span>
+    </div>
+</div>

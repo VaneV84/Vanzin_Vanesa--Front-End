@@ -1,0 +1,76 @@
+<section class="vh-80 gradient-custom">
+    <div class="container py-5 h-100" *ngIf="exp">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-8 col-lg-8 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem">
+            <div class="card-body p-5 text-center">
+              <div class="mb-md-5 mt-md-4 pb-5">
+                <h2 class="fw-bold mb-2 text-uppercase">Modificar la Experiencia Laboral</h2>
+
+                <form #f="ngForm" (ngSubmit)="onUpdate()" novalidate>
+                    <div class="form-outline form-white mb-4">
+                      <label for="nombre">Nombre de la Empresa</label>
+                      <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        class="form-control form-control-lg"
+                        [(ngModel)]="exp.nombre" name="nombre" required
+                      />
+                    </div>
+
+                    <div class="form-outline form-white mb-4">
+                      <label for="puesto">Puesto</label>
+                      <input
+                        type="text"
+                        id="puesto"
+                        name="puesto"
+                        class="form-control form-control-lg"
+                        [(ngModel)]="exp.puesto" name="puesto" required
+                      />
+                    </div>
+
+                    <div class="form-outline form-white mb-4">
+                      <label for="fechaComienzo">Año Comienzo</label>
+                      <input
+                        type="number"
+                        id="fechaComienzo"
+                        name="fechaComienzo"
+                        class="form-control form-control-lg"
+                        [(ngModel)]="exp.fechaComienzo" name="fechaComienzo" required
+                      />
+                    </div>
+
+                    <div class="form-outline form-white mb-4">
+                      <label for="fechaFinal">Año Final</label>
+                      <input
+                        type="number"
+                        id="fechaFinal"
+                        name="fechaFinal"
+                        class="form-control form-control-lg"
+                        [(ngModel)]="exp.fechaFinal" name="fechaFinal" required
+                      />
+                    </div>
+
+                    <div class="form-outline form-white mb-4">
+                        <label for="descrip">Descripción de la tarea</label>
+                        <textarea
+                          type="text"
+                          id="descrip"
+                          class="form-control form-control-lg"
+                          [(ngModel)]="exp.descrip" name="descrip" required
+                          ></textarea>
+                      </div>
+                  
+                  <button class="btn btn-outline-light btn-lg px-5" type="submit">
+                    Actualizar
+                  </button>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

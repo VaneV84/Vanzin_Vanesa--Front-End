@@ -1,0 +1,39 @@
+.row{
+    margin: 0%;
+    background-color: #ccccff;
+    padding: 20px;
+}
+
+.container{
+    width: auto;
+}
+
+#img-proyecto{
+    box-shadow: 10px 10px 25px #000000;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    height: auto;
+}
+
+button{
+    margin-left: 10px;
+}
+  
+body{
+    background: #ccccff;
+}
+  
+table{
+    table-layout: fixed;
+    width: 100%;
+    text-align: justify;
+}
+
+tr, td{
+    border: none;
+    font-size: large;
+    font-weight: 500;
+    color: #000080;
+}

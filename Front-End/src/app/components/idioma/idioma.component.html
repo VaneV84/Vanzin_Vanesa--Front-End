@@ -1,0 +1,52 @@
+<div class="row">
+    <h2>Idioma</h2>
+
+    <div class="col-lg-2 col-md-1 col-sm-1">
+        <button class="btn btn-secondary" routerLink="/newidioma" *ngIf="isLogged">Nuevo Idioma</button>
+    </div>
+
+    <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let idioma of idioma">
+        <circle-progress
+            [percent]="(idioma.porcentaje)"
+            [radius]="110"
+            [subtitle]="(idioma.nombre)"
+            [backgroundPadding]="-50"
+            [showInnerStroke]="true"
+            [clockwise]="false"
+            [showZeroOuterStroke]="true"
+            [outerStrokeWidth]="14"
+            [innerStrokeWidth]="14"
+            [space] = "-14"
+            [outerStrokeLinecap]="'square'"
+            [outerStrokeColor]="'#000080'"
+            [innerStrokeColor]="'#e7e8ea'"
+            [unitsColor]="'#000080'"
+            [subtitleColor]="'#000080'"
+            [titleColor]="'#000080'"
+            [backgroundColor]="'transparent'"
+            [backgroundStroke]="'transparent'"
+            [titleFontSize]="'24'"
+            [unitsFontSize]="'24'"
+            [subtitleFontSize]="'24'"
+            [subtitleFontWeight]="'500'"
+            [unitsFontWeight]="'500'"
+            [titleFontWeight]="'500'"
+            [animation]="true"
+            [animationDuration]="600"
+            [renderOnClick]="true"
+        ></circle-progress>
+
+        <div>
+            <td *ngIf="isLogged">
+                <button class="btn btn-secondary" routerLink="/editidioma/{{idioma.id}}">
+                    <i class="bi bi-pen"></i>
+                </button>
+            </td>
+            <td *ngIf="isLogged">
+                <button class="btn btn-danger" (click)="delete(idioma.id)">
+                    <i class="bi bi-trash"></i>
+                </button>
+            </td> 
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+.row{
+    padding: 70px;
+    margin: 0%;
+    background-color: #ccccff;
+}
+
+div{
+    text-align: justify;
+}
+ 
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
+#nombre{
+    color: #000080;
+    font-weight: bold;
+    margin-top: 10%;
+}
+
+#fotoPerfil{
+    position: absolute;
+    width: 15%;
+    border-radius: 100%;
+    left: 3%;
+    top: 275px;
+}
+
+button{
+    margin-left: 10px;
+}
+
+#intro{
+    font-size: large;
+    font-weight: 500;
+}
